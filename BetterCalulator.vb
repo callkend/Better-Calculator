@@ -8,7 +8,6 @@ Option Strict On
 
 
 Module BetterCalulator
-
     Sub Main()
         Dim firstNumber As Decimal
         Dim secondNumber As Decimal
@@ -18,8 +17,9 @@ Module BetterCalulator
         Dim math As Int16
 
         problem = True
-        Console.WriteLine("First Number = ")
 
+        'Prompts and grabs a user input for the first number.
+        Console.WriteLine("First Number = ")
         Do Until problem = False
             Try
                 userInput = Console.ReadLine()
@@ -33,8 +33,9 @@ Module BetterCalulator
         Loop
 
         problem = True
-        Console.WriteLine("Number Two=")
 
+        'Prompts and grabs a user input for the second number.
+        Console.WriteLine("Number Two=")
         Do Until problem = False
             Try
                 userInput = Console.ReadLine()
@@ -48,12 +49,12 @@ Module BetterCalulator
 
         problem = True
 
+        'Prompts and grabs a user input for the math operator.
         Console.WriteLine("Choose Option")
         Console.WriteLine("1. Add")
         Console.WriteLine("2. Subtract")
         Console.WriteLine("3. Multiply")
         Console.WriteLine("4. Divide")
-
         Do Until problem = False
             userInput = Console.ReadLine()
 
@@ -81,6 +82,7 @@ Module BetterCalulator
 
         Loop
 
+        'performs math operation and displays result to user.
         If math = 1 Then
             Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}")
         ElseIf math = 2 Then
@@ -90,7 +92,6 @@ Module BetterCalulator
         ElseIf math = 4 Then
             Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}")
         End If
-
         Console.ReadLine()
 
 
